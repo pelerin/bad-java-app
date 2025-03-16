@@ -34,6 +34,6 @@ jobs:
     - name: Run Semgrep
       env:
         SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-      run: semgrep ci --supply-chain
+      run: semgrep ci
     - name: Build with Maven
       run: mvn -B package --file pom.xml
