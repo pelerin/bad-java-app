@@ -31,7 +31,7 @@ jobs:
         cache: maven
     - name: mvn dependency:tree
       run: mvn dependency:tree -DoutputFile=maven_dep_tree.txt
-    - name: Run Semgrep
+    - name: Scan with Semgrep
       env:
         SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
       run: semgrep ci
